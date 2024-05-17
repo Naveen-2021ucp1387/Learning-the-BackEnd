@@ -10,8 +10,8 @@ function mul(a, b) {
 function div(a, b) {
   return a / b;
 }
-
-exports.sut = sum;
+// export {sum,sub,mul,div};
+exports.sum = sum;
 exports.sub = sub;
 exports.mul = mul;
 exports.div = div;
