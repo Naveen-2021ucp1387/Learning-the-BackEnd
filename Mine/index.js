@@ -1,3 +1,21 @@
+// passworrd and user name Mongo DB
+
+// ipsnaveen123          QRhRNX6dazhxYc7O
+
+// coderdost             eLp6E7NsSuB3V4* 
+
+// ipsnaveen123
+// 34pkGPY1YPcHo4Yn
+
+
+
+
+
+
+
+
+
+
 // // // // const lib = require('./lib.js');
 // // // // // import {sum,sub,mul,div} from './lib.js'
 // // // // const fs = require('fs');
@@ -246,12 +264,19 @@
 
 
 // model view controller .........................
-
+require('dotenv').config();
+const mongoose = require('mongoose');
 const express = require('express');
 const server = express();
 const productRouter = require('./routes/product');
 const morgan = require('morgan');
 
+// DB connection code
+main().catch(err => console.log(err));
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/ecommerce');
+  console.log("Database Connected");
+}
 
 // body parser.........
 server.use(express.json());
